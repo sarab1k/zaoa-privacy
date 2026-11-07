@@ -1,98 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ZAOA</title>
+    <title>سياسة الخصوصية - ZAOA</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background-color: #121212;
-            margin: 0;
-            padding: 20px;
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --accent-gold: #b8860b;
+            --accent-gold-light: #e5b839;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #2c2c2c;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 20px 15px;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: #1e1e1e;
-            padding: 30px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--accent-gold);
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            border: 1px solid #2a2a2a;
+            padding: 30px 25px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            color: #ffffff;
-            border-bottom: 2px solid #b8860b;
-            padding-bottom: 10px;
-            margin-top: 0;
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 25px;
         }
-        h2 {
-            color: #d4af37;
-            margin-top: 25px;
-        }
-        p, li {
-            font-size: 15px;
-            color: #cccccc;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
+
+        .header h1 {
+            color: var(--accent-gold-light);
+            font-size: 1.8rem;
+            letter-spacing: 1px;
             margin-bottom: 8px;
         }
-        .last-updated {
-            font-size: 13px;
-            color: #888888;
-            margin-bottom: 25px;
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .developer-badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 4px 12px;
+            background-color: rgba(184, 134, 11, 0.15);
+            border: 1px solid var(--accent-gold);
+            border-radius: 20px;
+            color: var(--accent-gold-light);
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .section {
+            margin-bottom: 22px;
+        }
+
+        .section h2 {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section p {
+            font-size: 0.98rem;
+            color: var(--text-color);
+            text-align: justify;
+        }
+
+        .ul-list {
+            list-style: none;
+            padding-right: 10px;
+            margin-top: 8px;
+        }
+
+        .ul-list li {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .ul-list li::before {
+            content: "•";
+            color: var(--accent-gold-light);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: 0;
+            top: -2px;
+        }
+
+        .highlight-box {
+            background-color: rgba(184, 134, 11, 0.1);
+            border-right: 3px solid var(--accent-gold);
+            padding: 12px 15px;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Privacy Policy for ZAOA</h1>
-        <div class="last-updated">Last Updated: November 7, 2026</div>
+        <div class="header">
+            <h1>سياسة الخصوصية - ZAOA</h1>
+            <p>تاريخ آخر تحديث: نوفمبر 2026</p>
+            <div class="developer-badge">تطوير بواسطة: NOAH</div>
+        </div>
 
-        <h2>1. Introduction</h2>
-        <p>Welcome to <strong>ZAOA</strong> ("we," "our," or "us"). We respect your privacy and are committed to protecting it. This Privacy Policy explains our practices regarding user information and clarifies that we do not collect, store, or process any personal data through the ZAOA mobile application.</p>
+        <div class="section">
+            <h2>1. مقدمة عن التطبيق والمطور</h2>
+            <p>تُقدّر إدارة تطبيق <strong>ZAOA</strong> خصوصيتكم وتلتزم بحمايتها. تم تطوير وتصميم هذا التطبيق بالكامل بواسطة المطور <strong>NOAH</strong> كمتجر فردي شخصي مخصص لعرض وتسوق الإكسسوارات العصرية (مثل الساعات، النظارات، والملحقات).</p>
+        </div>
 
-        <h2>2. Developer & App Information</h2>
-        <ul>
-            <li><strong>Application Name:</strong> ZAOA</li>
-            <li><strong>Developer:</strong> NOAH DEV (Individual Developer)</li>
-            <li><strong>App Category:</strong> E-Commerce / Accessories Store</li>
-            <li><strong>Contact & Ordering:</strong> Product inquiries and purchases are facilitated externally via Telegram channels.</li>
-        </ul>
+        <div class="section">
+            <h2>2. الأذونات والصلاحيات</h2>
+            <div class="highlight-box">
+                <p><strong>ملاحظة هامة:</strong> تطبيق ZAOA لا يتطلب ولا يطلب أي صلاحيات أو أذونات خاصة على جهازك نهائياً.</p>
+            </div>
+            <ul class="ul-list" style="margin-top: 12px;">
+                <li>لا نطلب إذن الوصول للتخزين (Storage).</li>
+                <li>لا نطلب إذن استخدام الكاميرا (Camera).</li>
+                <li>لا نطلب إذن تحديد الموقع الجغرافي (GPS).</li>
+                <li>لا نطلب أي أذونات حساسة أو صلاحيات وصول أخرى.</li>
+            </ul>
+        </div>
 
-        <h2>3. Data Collection and Usage</h2>
-        <p><strong>ZAOA does not collect, retain, or process any personal user data.</strong></p>
-        <ul>
-            <li><strong>No Registration Required:</strong> Users can browse products freely without creating an account or submitting personal credentials (such as name, email address, or phone number).</li>
-            <li><strong>No Analytics or Tracking:</strong> We do not use third-party tracking software, SDKs, or analytics services to monitor or record user behavior.</li>
-            <li><strong>No Third-Party Advertising:</strong> The application does not serve ads or integrate advertising frameworks.</li>
-        </ul>
+        <div class="section">
+            <h2>3. جمع البيانات ومعالجتها</h2>
+            <p>نظرًا لأن التطبيق مصمم كواجهة لاستعراض المنتجات فقط دون الحاجة إلى إنشاء حساب أو تسجيل دخول، فإننا <strong>لا نقوم بجمع أو حفظ أي بيانات شخصية</strong> (مثل الأسماء، العناوين، أو بيانات الدفع) داخل التطبيق.</p>
+        </div>
 
-        <h2>4. App Permissions</h2>
-        <p>The ZAOA app is designed with a strong focus on security and privacy. <strong>The application does not request or require any sensitive runtime permissions</strong>, including but not limited to:</p>
-        <ul>
-            <li>Device Storage / Media Access</li>
-            <li>Camera or Microphone</li>
-            <li>Precise or Approximate GPS Location</li>
-            <li>Contacts or Phone State</li>
-        </ul>
+        <div class="section">
+            <h2>4. آلية الطلب والتواصل</h2>
+            <p>عند رغبتك في شراء أي منتج داخل تطبيق <strong>ZAOA</strong>، يتم تحويلك بنقرة واحدة إلى حسابات التواصل الرسمية الخاصة بنا (مثل واتساب، تيليجرام، إنستغرام، أو فيسبوك) لإتمام الطلب والاتفاق بشكل مباشر، دون إدخال أي بيانات مالية داخل التطبيق.</p>
+        </div>
 
-        <h2>5. Third-Party Links & Communication (Telegram)</h2>
-        <p>Our application contains direct links and interactive buttons that open external conversations via <strong>Telegram</strong> to process customer inquiries and orders. Once you leave the ZAOA app to interact on Telegram, any information you provide is governed by Telegram's official Privacy Policy and Terms of Service. We do not store or transmit any conversation logs or user details inside the ZAOA app itself.</p>
+        <div class="section">
+            <h2>5. طريقة النشر والتحديثات</h2>
+            <p>يتم نشر وتحديث التطبيق رسمياً عبر قناتنا المعتمدة على <strong>تيليجرام</strong>. نوصي دائماً بتحميل التطبيق وتحديثاته من المصادر الرسمية لضمان أعلى مستويات الأمان.</p>
+        </div>
 
-        <h2>6. Children's Privacy and Target Audience</h2>
-        <p>ZAOA is a general audience application suitable for users of all ages, including children, as it strictly displays accessory product listings (e.g., watches, eyewear). It does not contain inappropriate content, age-restricted material, or data collection mechanisms targeting minors.</p>
+        <div class="section">
+            <h2>6. الفئة العمرية</h2>
+            <p>محتوى تطبيق <strong>ZAOA</strong> آمن وعام كلياً، وهو متاح لجميع الفئات العمرية دون أي قيود.</p>
+        </div>
 
-        <h2>7. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. Any changes will be published directly on this page with an updated revision date.</p>
+        <div class="section">
+            <h2>7. التواصل مع المطور</h2>
+            <p>لأي استفسارات أو أسئلة تتعلق بسياسة الخصوصية أو التطبيق، يمكنك التواصل مباشرة مع المطور <strong>NOAH</strong> عبر حسابات التواصل المعتمدة داخل التطبيق أو عبر تيليجرام.</p>
+        </div>
 
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions or suggestions regarding this Privacy Policy, please feel free to reach out to us via our official Telegram support channel.</p>
+        <div class="footer">
+            تطوير وإدارة: <strong>NOAH</strong> | جميع الحقوق محفوظة © ZAOA 2026
+        </div>
     </div>
+
 </body>
 </html>
